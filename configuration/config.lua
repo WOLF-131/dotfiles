@@ -2,7 +2,7 @@ return {
 	widget = {
 		email  = {
 			-- Email address
-			address = 'janik.rupar@roche.com',
+			address = '',
 			-- App password
 			app_password = '',
 			-- Imap server
@@ -13,9 +13,9 @@ return {
 
 		weather = {
 			-- API Key
-			key = 'f25ddf6270000c2756b895cdf8a9df28',
+			key = '',
 			-- City ID
-			city_id = '2658954',
+			city_id = '',
 			-- Units
 			units = 'metric',
 			-- Update in N seconds
@@ -24,9 +24,9 @@ return {
 
 		network = {
 			-- Wired interface
-			wired_interface = 'enp0s31f6',
+			wired_interface = 'enp0s0',
 			-- Wireless interface
-			wireless_interface = 'wlp58s0'
+			wireless_interface = 'wlan0'
 		},
 
 		clock = {
@@ -56,6 +56,31 @@ return {
 			debug_mode = false
 		},
 
+		dynamic_wallpaper = {
+			-- Will look for wallpapers here
+			wall_dir = 'theme/wallpapers/',
+			-- Image formats
+			valid_picture_formats = {'jpg', 'png', 'jpeg'},
+			-- Leave this table empty for full auto scheduling
+			wallpaper_schedule = {
+				['00:00:00'] = 'midnight-wallpaper.jpg',
+				['06:22:00'] = 'morning-wallpaper.jpg',
+				['12:00:00'] = 'noon-wallpaper.jpg',
+				['17:58:00'] = 'night-wallpaper.jpg'
+				-- Example of just using auto-scheduling with keywords
+				--[[
+					'midnight',
+					'morning',
+					'noon',
+					'afternoon',
+					'evening',
+					'night'
+				--]]
+			},
+			-- Stretch background image across all screens(monitor)
+			stretch = false
+		},
+
 		lockscreen = {
 			-- Clock format
 			military_clock = true,
@@ -68,7 +93,7 @@ return {
 			-- Background directory - Defaults to 'awesome/config/theme/wallpapers/' if null
 			bg_dir = nil,
 			-- Will look for this image file under 'bg_dir'
-			bg_image = 'wallpaper.jpg',
+			bg_image = 'locksreen-bg.jpg',
 			-- Blur lockscreen background
 			blur_background = false,
 			-- Blurred/filtered background image path (No reason to change this)
