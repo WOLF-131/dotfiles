@@ -92,7 +92,7 @@ awful.keyboard.append_global_keybindings({
 
     awful.key({ modkey }, "r", function () awful.spawn(terminal.." --hold --start-as minimized sh -c ~/.config/rofi/launchers/type-4/launcher.sh") end,
               {description = "open Rofi", group = "launcher"}),
-    awful.key({ modkey }, "/", function () awesome.emit_signal('powermenu::toggle') end,
+    awful.key({ modkey }, "/", function () awful.spawn(terminal.." --hold --start-as minimized sh -c ~/.config/rofi/powermenu/type-3/powermenu.sh") end,
               {description = "open Power menu", group = "launcher"}),
     awful.key({ modkey }, ",", function () awesome.emit_signal('dashboard::toggle') end,
               {description = "open Dashboard", group = "launcher"}),

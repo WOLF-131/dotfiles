@@ -2,7 +2,7 @@
 
 # chmod +x ~/dotfiles/symlink.sh
 
-mydotfiles=$HOME/dotfiles
+mydotfiles=$HOME/code/dotfiles
 
 # Change for your user
 ln -s $mydotfiles/neofetch   ~/.config

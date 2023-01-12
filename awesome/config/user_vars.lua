@@ -13,19 +13,28 @@ user_vars = {
   autostart = {
     -- Compositor
       'picom',
-      -- Blueman applet
-      'blueman-applet',
-      -- Music server
-      -- 'mpd',
-      -- Polkit and keyring
-      '/usr/bin/lxqt-policykit-agent &' ..
-      ' eval $(gnome-keyring-daemon -s --components=pkcs11,secrets,ssh,gpg)',
-      -- Load X colors
-      'xrdb ' .. home .. '/.Xresources',
-      -- Audio equalizer
-      'pulseeffects --gapplication-service',
-      -- Load Wallpaper with feh
-      home .. '/.fehbg'
+    -- PolKit
+      'lxsession',
+    -- Blueman applet
+    'blueman-applet',
+    -- Music server
+    -- 'mpd',
+    -- Polkit and keyring
+    '/usr/bin/lxqt-policykit-agent &' ..
+    ' eval $(gnome-keyring-daemon -s --components=pkcs11,secrets,ssh,gpg)',
+    -- Load X colors
+    'xrdb ' .. home .. '/.Xresources',
+    -- Audio equalizer
+    'pulseeffects --gapplication-service',
+    -- Load Wallpaper with feh
+    home .. '/.fehbg',
+    -- lock screen
+    'i3lock-fancy',
+    -- Lockscreen timer
+		[[
+      xidlehook --not-when-fullscreen --not-when-audio --timer 600 \
+      "awesome-client 'awful.spawn.with_shell(\"i3lock-fancy\")'" ""
+    ]]
   },
   -- Editors
   editor = os.getenv("EDITOR") or "nano",
