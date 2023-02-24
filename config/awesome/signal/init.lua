@@ -1,0 +1,5 @@
+-- require("signal.network")
+-- require("signal.lockscreen")
+-- require("signal.launcher")
+-- require("signal.powermenu")
+-- require("signal.volume")

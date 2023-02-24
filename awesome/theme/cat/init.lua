@@ -1,8 +1,0 @@
-require("theme.cat.theme")
-require("theme.cat.bar")
-require("theme.cat.wallpaper")
-require("theme.cat.notifications")
-require("theme.cat.titlebar")
-require("theme.cat.powermenu")
-require("theme.cat.menu")
--- require("theme.cat.lockscreen")

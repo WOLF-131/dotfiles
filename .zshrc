@@ -131,5 +131,14 @@ source $ZSH/oh-my-zsh.sh
 ###############################################################
 
 # Path
-export PATH="/home/users/ruparj/.local/bin:$PATH"
+export PATH="$HOME/.local/bin:$PATH"
 export PATH="/usr/local/texlive/2022/bin/x86_64-linux:$PATH"
+
+# Load Angular CLI autocompletion.
+source <(ng completion script)
+
+if [ -f ~/.sh_aliases ]; then
+    . ~/.sh_aliases
+fi
+
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion

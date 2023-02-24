@@ -1,0 +1,11 @@
+/**
+ *
+ * Author : Janik Rupar (WOLF-131)
+ * Github : @wolf-131
+ *
+ * Fonts
+ **/
+
+* {
+    font: "JetBrains Mono Nerd Font 12";
+}
